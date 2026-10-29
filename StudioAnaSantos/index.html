@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Ana Santos | Manicure, Cabelo, Depilação &amp; Estética</title>
+<meta name="description" content="Studio Ana Santos — manicure, cabelo, depilação, limpeza de pele, design de sobrancelhas e massagem. Agende: (11) 3668-6133 / 3666-4898 / 98907-1254.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf8f7;
+  --bg-2:#f8eeec;
+  --ink:#33262b;
+  --muted:#977f86;
+  --rose:#c4708a;
+  --rose-2:#e3a7ba;
+  --gold:#c9a05a;
+  --card:#ffffff;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Playfair Display',serif;font-weight:700;line-height:1.15}
+.section{padding:96px 0}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.tag::before{content:"";display:inline-block;width:28px;height:1px;background:var(--rose);vertical-align:middle;margin-right:10px}
+.center{text-align:center}
+.center .tag::before{display:none}
+.section-title{font-size:clamp(32px,4.5vw,50px);margin-bottom:14px}
+.section-sub{color:var(--muted);font-size:16px;max-width:540px}
+.center .section-sub{margin:0 auto}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(253,248,247,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,112,138,.15)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Playfair Display',serif;font-size:23px;font-weight:700}
+.logo em{color:var(--rose);font-style:italic}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:14px;color:var(--muted);font-weight:500;transition:.25s}
+.nav-links a:hover{color:var(--rose)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s}
+.btn-rose{background:linear-gradient(135deg,var(--rose),var(--rose-2));color:#fff;box-shadow:0 8px 24px rgba(196,112,138,.3)}
+.btn-rose:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(196,112,138,.42)}
+.btn-outline{border:1px solid rgba(51,38,43,.25);color:var(--ink)}
+.btn-outline:hover{border-color:var(--rose);color:var(--rose)}
+.btn-sm{padding:10px 24px;font-size:13px}
+.hamb{display:none;background:none;border:none;color:var(--ink);font-size:26px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(100deg,rgba(253,248,247,.96) 38%,rgba(253,248,247,.72) 60%,rgba(227,167,186,.3)),
+  url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1600&q=80') center right/cover no-repeat, var(--bg)}
+.hero-content{position:relative;z-index:2;padding:140px 0 80px}
+.hero h1{font-size:clamp(44px,6.5vw,78px)}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{margin:24px 0 36px;font-size:17px;color:var(--muted);max-width:480px}
+.hero .actions{display:flex;gap:16px;flex-wrap:wrap}
+.phones{display:flex;gap:20px;margin-top:44px;flex-wrap:wrap}
+.phones a{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--ink)}
+.phones a span{color:var(--rose)}
+.phones a:hover{color:var(--rose)}
+
+/* SERVIÇOS */
+.services{background:var(--bg-2)}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:56px}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(196,112,138,.14);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(51,38,43,.12);border-color:rgba(196,112,138,.4)}
+.card-img{height:180px;background-size:cover;background-position:center}
+.card-body{padding:28px}
+.card-body h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:8px}
+.card-body p{font-size:14px;color:var(--muted)}
+
+/* POR QUE */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-img{height:460px;border-radius:var(--radius);
+  background:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.18)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80') center/cover,var(--rose-2)}
+.why ul{list-style:none;margin-top:28px}
+.why li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;font-size:15px;color:var(--muted)}
+.why li b{color:var(--ink)}
+.why li::before{content:"❀";color:var(--rose)}
+
+/* CONTATO */
+.contact{background:linear-gradient(135deg,#4a2f3a,#7a4a5c);border-radius:26px;padding:72px 48px;color:#fdf3f5;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;bottom:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(227,167,186,.35),transparent 70%)}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;position:relative;z-index:2}
+.contact h2{font-size:clamp(32px,4.5vw,52px)}
+.contact p{opacity:.8;margin:16px 0 30px;max-width:420px}
+.contact-phones{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:36px}
+.contact-phones h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:20px}
+.contact-phones a{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:16px;font-weight:500;transition:.25s}
+.contact-phones a:last-of-type{border:none}
+.contact-phones a:hover{color:var(--rose-2)}
+.contact-phones a i{font-style:normal}
+.contact-phones small{display:block;margin-top:18px;opacity:.7;font-size:13px}
+
+/* FOOTER */
+footer{padding:48px 0;border-top:1px solid rgba(196,112,138,.15);margin-top:96px}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer small{color:var(--muted)}
+.insta{color:var(--rose);font-weight:600}
+
+@media(max-width:860px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;padding:24px;gap:20px;display:none;border-bottom:1px solid rgba(196,112,138,.2)}
+  .nav-links.open{display:flex}
+  .hamb{display:block}
+  .navbar .btn{display:none}
+  .why{grid-template-columns:1fr}
+  .why-img{height:320px}
+  .contact-grid{grid-template-columns:1fr}
+  .section{padding:72px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="logo">Studio <em>Ana Santos</em></a>
+    <button class="hamb" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <ul class="nav-links" id="nav">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#studio">O Studio</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5511989071254" target="_blank" rel="noopener" class="btn btn-rose btn-sm">Agendar pelo WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-content">
+    <span class="tag">Beleza completa em um só lugar</span>
+    <h1>Cuidado completo,<br>da unha <em>ao cabelo</em></h1>
+    <p>Manicure, cabelo, depilação, limpeza de pele, design de sobrancelhas e massagem. Um studio pensado pra você sair renovada.</p>
+    <div class="actions">
+      <a href="https://wa.me/5511989071254" target="_blank" rel="noopener" class="btn btn-rose">📲 Agendar horário</a>
+      <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+    </div>
+    <div class="phones">
+      <a href="tel:+551136686133"><span>☎</span> (11) 3668-6133</a>
+      <a href="tel:+551136664898"><span>☎</span> (11) 3666-4898</a>
+      <a href="tel:+5511989071254"><span>✆</span> (11) 98907-1254</a>
+    </div>
+  </div>
+</header>
+
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="center">
+      <span class="tag">Nossos serviços</span>
+      <h2 class="section-title">Tudo pra sua beleza, em um só lugar</h2>
+      <p class="section-sub">Profissionalismo e carinho em cada detalhe — do dia a dia àquela ocasião especial.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="card-body"><h3>Manicure &amp; Pedicure</h3><p>Unhas impecáveis: esmaltação, alongamento e cuidado completo pra mãos e pés.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="card-body"><h3>Cabelo</h3><p>Corte, escova, coloração e tratamentos pra todos os tipos de fio.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="card-body"><h3>Limpeza de Pele</h3><p>Pele renovada, limpa e hidratada com cuidado profissional.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80'),linear-gradient(135deg,#e3a7ba,#c4708a)"></div>
+        <div class="card-body"><h3>Design de Sobrancelhas</h3><p>Formato ideal pro seu rosto, realçando o olhar com naturalidade.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="card-body"><h3>Massagem</h3><p>Relaxamento e bem-estar pra aliviar a tensão da rotina.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image:linear-gradient(rgba(51,38,43,.05),rgba(51,38,43,.2)),url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80'),linear-gradient(135deg,#c9a05a,#e3a7ba)"></div>
+        <div class="card-body"><h3>Depilação</h3><p>Pele lisinha com técnica cuidadosa e confortável.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="studio">
+  <div class="container why">
+    <div class="why-img"></div>
+    <div>
+      <span class="tag">O Studio</span>
+      <h2 class="section-title">Um espaço pra você se cuidar</h2>
+      <p class="section-sub">No Studio Ana Santos você encontra vários serviços de beleza no mesmo lugar, com atendimento atencioso e aquele clima acolhedor que faz a diferença.</p>
+      <ul>
+        <li><b>Vários serviços, um endereço</b> — unha, cabelo, pele e sobrancelha no mesmo dia</li>
+        <li><b>Atendimento com hora marcada</b> — ligue ou chame no WhatsApp</li>
+        <li><b>Profissionais experientes</b> — tradição e cuidado em cada atendimento</li>
+        <li><b>Ambiente acolhedor</b> — pra você relaxar enquanto se cuida</li>
+      </ul>
+      <a href="https://www.instagram.com/studioanasantos/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:28px">@studioanasantos no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contato" style="padding-top:0">
+  <div class="container">
+    <div class="contact">
+      <div class="contact-grid">
+        <div>
+          <span class="tag" style="color:var(--rose-2)">Agendamentos</span>
+          <h2>Marque seu horário</h2>
+          <p>Ligue, chame no WhatsApp ou passe no studio. Atendimento de segunda a sábado, com hora marcada pra você não esperar.</p>
+          <a href="https://wa.me/5511989071254" target="_blank" rel="noopener" class="btn btn-rose">Chamar no WhatsApp</a>
+        </div>
+        <div class="contact-phones">
+          <h3>Telefones</h3>
+          <a href="tel:+551136686133"><i>☎</i> (11) 3668-6133</a>
+          <a href="tel:+551136664898"><i>☎</i> (11) 3666-4898</a>
+          <a href="tel:+5511989071254"><i>✆</i> (11) 98907-1254</a>
+          <small>WhatsApp: (11) 98907-1254 · Instagram: @studioanasantos</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="logo" style="font-size:20px">Studio <em>Ana Santos</em></span>
+    <small>© 2026 Studio Ana Santos · <a class="insta" href="https://www.instagram.com/studioanasantos/" target="_blank" rel="noopener">@studioanasantos</a></small>
+  </div>
+</footer>
+
+</body>
+</html>

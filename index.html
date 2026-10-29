@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Pages — Projetos</title>
+<meta name="description" content="Coleção de landing pages criadas para negócios locais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1115;
+  --card:#171a21;
+  --border:#262b36;
+  --text:#eef1f6;
+  --muted:#8b93a3;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;width:100%}
+
+header{padding:96px 0 56px;text-align:center}
+header .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#7cc7ff;border:1px solid rgba(124,199,255,.35);padding:6px 16px;border-radius:999px;margin-bottom:20px}
+header h1{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-.02em}
+header p{color:var(--muted);margin-top:14px;font-size:17px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;padding-bottom:96px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);border-color:rgba(124,199,255,.5);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.thumb{height:150px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative;overflow:hidden}
+.t-chopp{background:linear-gradient(135deg,#2a1f14,#8a5a10)}
+.t-kg{background:linear-gradient(135deg,#f3e6da,#c99e5f)}
+.t-ana{background:linear-gradient(135deg,#7a4a5c,#e3a7ba)}
+.t-ark{background:linear-gradient(135deg,#5a1050,#ff3d8a)}
+.t-pipe{background:linear-gradient(135deg,#0e2233,#22d3ee)}
+.card-body{padding:26px;flex:1;display:flex;flex-direction:column}
+.card-body .cat{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7cc7ff;margin-bottom:8px}
+.card-body h2{font-size:21px;font-weight:700;margin-bottom:8px}
+.card-body p{font-size:14px;color:var(--muted);flex:1}
+.card-body .open{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:#7cc7ff}
+.card:hover .open{gap:12px}
+.card-body .open{transition:.25s}
+
+footer{margin-top:auto;padding:32px 0;border-top:1px solid var(--border);text-align:center}
+footer small{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="badge">Projetos · Landing Pages</span>
+    <h1>Landing Pages</h1>
+    <p>Coleção de landing pages criadas para negócios locais da Vila Jacuí e região — São Paulo.</p>
+  </div>
+</header>
+
+<main class="container grid">
+  <a class="card" href="./SrChoppEspetaria/index.html">
+    <div class="thumb t-chopp">🍻</div>
+    <div class="card-body">
+      <div class="cat">Espetaria &amp; Chopperia</div>
+      <h2>Sr. Chopp Espetaria</h2>
+      <p>A verdadeira Picanha com Aligot, espetinhos na brasa e chopp gelado. 2 unidades + delivery no iFood.</p>
+      <span class="open">Abrir landing page →</span>
+    </div>
+  </a>
+
+  <a class="card" href="./KGStudioDeBeleza/index.html">
+    <div class="thumb t-kg">✨</div>
+    <div class="card-body">
+      <div class="cat">Studio de Beleza</div>
+      <h2>KG Studio de Beleza</h2>
+      <p>Kathleen Macedo — especialista em mechas: loiro, moreno iluminado e total blond. Progressiva e mega hair.</p>
+      <span class="open">Abrir landing page →</span>
+    </div>
+  </a>
+
+  <a class="card" href="./StudioAnaSantos/index.html">
+    <div class="thumb t-ana">💅</div>
+    <div class="card-body">
+      <div class="cat">Salão &amp; Estética</div>
+      <h2>Studio Ana Santos</h2>
+      <p>Manicure, cabelo, depilação, limpeza de pele, design de sobrancelhas e massagem — tudo em um só lugar.</p>
+      <span class="open">Abrir landing page →</span>
+    </div>
+  </a>
+
+  <a class="card" href="./ArkStore/index.html">
+    <div class="thumb t-ark">🛍️</div>
+    <div class="card-body">
+      <div class="cat">Loja Multimarcas</div>
+      <h2>Ark Store</h2>
+      <p>Moda feminina, masculina, infantil e plus size com as tendências do momento. Parcelamento no cartão.</p>
+      <span class="open">Abrir landing page →</span>
+    </div>
+  </a>
+
+  <a class="card" href="./PipelineJacui/index.html">
+    <div class="thumb t-pipe">👟</div>
+    <div class="card-body">
+      <div class="cat">Loja de Moda</div>
+      <h2>Pipeline Jacuí</h2>
+      <p>Moda masculina e feminina com marcas originais — Tommy, Puma, T&amp;C, Kenner. Pedidos pelo WhatsApp.</p>
+      <span class="open">Abrir landing page →</span>
+    </div>
+  </a>
+</main>
+
+<footer>
+  <small>© 2026 · Landing Pages por Artur</small>
+</footer>
+
+</body>
+</html>
